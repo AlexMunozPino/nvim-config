@@ -2,8 +2,9 @@ call plug#begin()
 " MUST
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'SirVer/ultisnips'
 
 " SYNTAX
 Plug 'sheerun/vim-polyglot'
@@ -17,11 +18,20 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
 
 " Others
-Plug 'liuchengxu/vim-which-key'
+" Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 " WHICH KEY
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+" ULTISNIPS
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-_>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
